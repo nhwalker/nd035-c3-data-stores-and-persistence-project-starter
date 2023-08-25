@@ -29,9 +29,7 @@ public class CustomerService {
     }
 
     public Customer getOwnerByPet(long petId){
-        Customer found = customerRepository.findByPetsId(petId);
-        List<Customer> foundAll = customerRepository.findAll();
-        return found;
+        return customerRepository.findByPetsId(petId);
     }
 
     public Customer getCustomer(long id){

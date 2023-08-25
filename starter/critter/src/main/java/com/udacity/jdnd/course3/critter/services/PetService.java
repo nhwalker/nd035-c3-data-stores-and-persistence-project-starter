@@ -22,7 +22,7 @@ public class PetService {
     }
 
     public Pet savePet(@RequestBody Pet pet) {
-        Pet saved= pets.save(pet);
+        Pet saved = pets.save(pet);
         saved.getOwner().getPets().add(saved);
         return saved;
     }
